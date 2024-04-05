@@ -1203,7 +1203,16 @@ public:
 		}
 		else{
 		if(saveload==1){
-				cout << "\n\n\n"; FunctionDef.truenarrator("\tVitaj spat cestovatel. Chybal si nam. Mozes pokracovat "+mode+ " na svojej ceste.", 50); Sleep(2500);
+				if(mode=="easy"){
+					cout << "\n\n\n"; FunctionDef.truenarrator("\tVitaj spat cestovatel. Chybal si nam. Mozes pokracovat na svojej ceste s obtiaznostou LAHKA.", 50);
+				}
+				else if(mode=="normal"){
+					cout << "\n\n\n"; FunctionDef.truenarrator("\tVitaj spat cestovatel. Chybal si nam. Mozes pokracovat na svojej ceste s obtiaznostou NORMALNA.", 50);
+				}
+				else if(mode=="hard"){
+					cout << "\n\n\n"; FunctionDef.truenarrator("\tVitaj spat cestovatel. Chybal si nam. Mozes pokracovat na svojej ceste s obtiaznostou TAZKA.", 50);
+				}
+				Sleep(2500);
 				system("cls");
 			}
 			if(sequence==0) sequence++;
@@ -1229,7 +1238,7 @@ public:
 		FunctionDef.MCS("Ako to myslis ze nemozes?", 80); FunctionDef.skip(1000);
 		cout << "\n";
 		FunctionDef.narrator("Sam netusim.", 80); FunctionDef.skip(500);FunctionDef.narratorclean(vc," Vyzera to tak...", 120); FunctionDef.skip(400);FunctionDef.narratorclean(vc," ze som v tebe.", 100); FunctionDef.skip(750);
-		cout << endl << endl;FunctionDef.truenarrator("1) Preco si vo mne?", 50); cout << "\n";FunctionDef.truenarrator("2) Ako je to mozne?",50); cout << "\n";FunctionDef.truenarrator("3) Co sa stalo s mojimi spomienkami?",50); cout << "\n";FunctionDef.truenarrator("4) Klames!. Isto sa schovavas niekde za tymi stromami.",50); 
+		cout << endl << endl;FunctionDef.truenarrator("1) Preco si vo mne?", 50); cout << "\n";FunctionDef.truenarrator("2) Ako je to mozne?",50); cout << "\n";FunctionDef.truenarrator("3) Co sa stalo s mojimi spomienkami?",50); cout << "\n";FunctionDef.truenarrator("4) Klames! Isto sa schovavas niekde za tymi stromami.",50); 
 		cout << "\n\n\033[33m>>    ";
 		diadec2 = FunctionDef.GVIclean(1,4);
 		cout << "\033[0m";
@@ -2099,8 +2108,21 @@ public:
 				FunctionDef.narrator("Yes,", 100); FunctionDef.skip(250); FunctionDef.narratorclean(vc, " we should.", 80); FunctionDef.skip(400); FunctionDef.narratorclean(vc, " We need to find a settlement.", 80); FunctionDef.skip(1000);
 			}
 		}
-		/*else{
-		}*/
+		else{
+			if(saveload==2){
+				if(mode=="easy"){
+					cout << "\n\n\n"; FunctionDef.truenarrator("\tVitaj spat cestovatel. Chybal si nam. Mozes pokracovat na svojej ceste s obtiaznostou LAHKA.", 50);
+				}
+				else if(mode=="normal"){
+					cout << "\n\n\n"; FunctionDef.truenarrator("\tVitaj spat cestovatel. Chybal si nam. Mozes pokracovat na svojej ceste s obtiaznostou NORMALNA.", 50);
+				}
+				else if(mode=="hard"){
+					cout << "\n\n\n"; FunctionDef.truenarrator("\tVitaj spat cestovatel. Chybal si nam. Mozes pokracovat na svojej ceste s obtiaznostou TAZKA.", 50);
+				}
+				Sleep(2500);
+				system("cls");
+			}
+		}
 	}
 };
 int main() {
