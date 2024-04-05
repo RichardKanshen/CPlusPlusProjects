@@ -346,7 +346,7 @@ public:
 		else{
 			FunctionDef.truenarrator("Poobzeras sa okolo seba a vidis:", 50);
 			cout << "\n";
-			FunctionDef.truenarrator("1) Stromy", 50); cout << "\n"; FunctionDef.truenarrator("2) Stromy", 50); cout << "\n"; FunctionDef.truenarrator("3) Stromy", 50); cout << "\n"; FunctionDef.truenarrator("4) Cestu", 50); cout << "\n"; FunctionDef.truenarrator("5) Divne miesto medzi stromami, kde mozes vidiet pohodene veci.", 50); FunctionDef.skip(500); cout << "\n\n"; FunctionDef.truenarrator("What do you choose?", 50);
+			FunctionDef.truenarrator("1) Stromy", 50); cout << "\n"; FunctionDef.truenarrator("2) Stromy", 50); cout << "\n"; FunctionDef.truenarrator("3) Stromy", 50); cout << "\n"; FunctionDef.truenarrator("4) Cestu", 50); cout << "\n"; FunctionDef.truenarrator("5) Divne miesto medzi stromami, kde mozes vidiet pohodene veci.", 50); FunctionDef.skip(500); cout << "\n\n"; FunctionDef.truenarrator("Co si vyberies?", 50);
 			cout << "\n";
 		}
 	}
