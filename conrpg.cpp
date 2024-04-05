@@ -19,7 +19,7 @@ public:
 	string diadec1, diadec2, diadec3, diadec4, diadec5;
 	string b0, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
 	const string mc = "\033[33m", vc = "\033[36m";
-	int saveload, relwvoid, a=0, b=0, sequence, level, xp, requiredxp, xpgained=0, initiallvl, plvlbonusdmg, lives;
+	int saveload, relwvoid, a=0, sequence, level, xp, requiredxp, xpgained=0, initiallvl, plvlbonusdmg, lives;
 	double perlevel, hp, currenthp, maxdmg;
 	bool isAlive = true, earlyexplanation = false, ExistujeSave;
 
@@ -151,7 +151,7 @@ public:
 					if(_kbhit()){
 				  	char key = _getch();
 				  	if(key=='f'){
-				  		fightstatus="", input="", tb="", decision1="", decision1sub1="", b1pathdec="", decision2="", diadec1="", diadec2="", diadec3="", diadec4="", diadec5="", hp=20, level=0, xp=0, currenthp=20, a = 0, b = 0;
+				  		fightstatus="", input="", tb="", decision1="", decision1sub1="", b1pathdec="", decision2="", diadec1="", diadec2="", diadec3="", diadec4="", diadec5="", hp=20, level=0, xp=0, currenthp=20, a = 0;
 				  		if(sequence==1) sequence1(lang);
 				  		else if(sequence==2) sequence2(lang);
 						}
@@ -262,6 +262,7 @@ public:
 			}
 			inputFile >> fightstatus;
 			inputFile >> xpgained;
+			inputFile.close();
 			if(fightstatus=="1"){
 				FunctionDef.truenarrator("You aborted the fight... You automatically die.", 50); cout << endl; FunctionDef.skip(250); FunctionDef.truenarrator("[Press F to load the latest save/L to start over]",50);
 			}
@@ -280,6 +281,7 @@ public:
 			}
 			inputFile >> fightstatus;
 			inputFile >> xpgained;
+			inputFile.close();
 			if(fightstatus=="1"){
 				FunctionDef.truenarrator("Prerusil si suboj... Automaticky umieras.", 50); cout << "\n"; FunctionDef.skip(250); FunctionDef.truenarrator("[Stlac F pre nacitanie poslednej ulozenej pozicie alebo stlac L pre nacitanie novej hry.]",50);
 				lives--; deathsequence(lang);
@@ -288,7 +290,7 @@ public:
 				FunctionDef.truenarrator("Dokoncil si suboj.", 50); cout << "\n";
 			}
 		}
-		inputFile.close();
+		
 		Sleep(3000);
 		xp+=xpgained;
 		checkLevelUp(lang);
@@ -957,7 +959,7 @@ public:
 			cout << "\n";
 			d1(lang);
 			while(true){
-				if(a>0 || b>0) d1(lang);
+				if(a>0) d1(lang);
 				cout << endl << "\n";
 				FunctionDef.flushInput();
 				cout << "\033[33m>>    ";
@@ -1021,7 +1023,8 @@ public:
 					cout << endl << "\n";
 					FunctionDef.truenarrator("Great choice, better than \"trees\" atleast, you near the abandoned things and find the following:",50); cout << "\n\n";FunctionDef.truenarrator("- Tea",50); cout << "\n";FunctionDef.truenarrator("- An iron sword",50); cout << "\n";FunctionDef.truenarrator("- Golden armor with a low durability",50); cout << "\n";FunctionDef.truenarrator("- A shield",50); cout << "\n";FunctionDef.truenarrator("- Elixir of Love",50); cout << "\n";FunctionDef.truenarrator("- A stick",50); cout << "\n";FunctionDef.truenarrator("- Bandage x3",50); cout << "\n";FunctionDef.truenarrator("- A small backpack", 50); break;
 				}
-			}
+			}	
+			a=0;
 			cout << endl << "\n"; diadec1 = ""; diadec2 = ""; diadec3 = ""; diadec4 = ""; diadec5 = "";
 			if(a==3&&(relwvoid==1||relwvoid==2)) b0 = "1";
 			else if(a==3&&(relwvoid==3||relwvoid==4)) b0 = "2";
@@ -1641,7 +1644,7 @@ public:
 		cout << "\n";
 		d1(lang);
 		while(true){
-			if(a>0 || b>0) d1(lang);
+			if(a>0) d1(lang);
 			cout << endl << endl;
 			FunctionDef.flushInput();
 			cout << "\033[33m>>    ";
