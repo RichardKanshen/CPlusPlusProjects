@@ -216,7 +216,7 @@ public:
 					}
 				}
 			}
-		}*/
+		}
 	}
 	int ambush(string attacker, string language) {
 
@@ -457,66 +457,71 @@ public:
 		}
 		else{
 				system("cls");
-		level = 0; hp = 20; xp = 0; currenthp = 20; maxdmg = 1;
-		cout << "                                            V I T A J    V" << endl;
-	 	cout << " .----------------.    .----------------.  .----------------.  .-----------------.   .----------------. " << endl << "| .--------------. |  | .--------------. || .--------------. || .--------------. |  | .--------------. |" << endl << "| |              | |  | |     ______   | || |     ____     | || | ____  _____  | |  | |              | |" << endl << "| |              | |  | |   .' ___  |  | || |   .'    `.   | || ||_   \\|_   _| | |  | |              | |" << endl << "| |    ______    | |  | |  / .'   \\_|  | || |  /  .--.  \\  | || |  |   \\ | |   | |  | |    ______    | |" << endl << "| |   |______|   | |  | |  | |         | || |  | |    | |  | || |  | |\\ \\| |   | |  | |   |______|   | |" << endl << "| |              | |  | |  \\ `.___.'\\  | || |  \\  `--'  /  | || | _| |_\\   |_  | |  | |              | |" << endl << "| |              | |  | |   `._____.'  | || |   `.____.'   | || ||_____|\\____| | |  | |              | |" << endl << "| |              | |  | |              | || |              | || |              | |  | |              | |" << endl << "| '--------------' |  | '--------------' || '--------------' || '--------------' |  | '--------------' |" << endl << " '----------------'    '----------------'  '----------------'  '----------------'    '----------------' ";
-		cout << endl << "                                           The C++ Console RPG";
-		cout << endl << "                                         Stlac [cokolvek] a zacni hru"; 
-		_getch();
-		cout << "\n";FunctionDef.truenarrator("Zdravim ta cestovatel!", 100); FunctionDef.skip(1000); cout << "\n";
-		FunctionDef.truenarrator("...", 500); FunctionDef.skip(1000); cout << "\n";
-		FunctionDef.truenarrator("Asi sa nevolas cestovatel, ze", 80); FunctionDef.skip(1500); cout << "\n";
-		FunctionDef.truenarrator("Ako sa volas?", 80); FunctionDef.skip(1000); cout << endl << "      [NAPIS SVOJE MENO]" << endl;
-		FunctionDef.flushInput();
-		cout << ">>    "; getline(cin, input); FunctionDef.skip(1000); playerName = input; save();
-		if (!playerName.empty()) {
-			FunctionDef.truenarrator("Rad ta spoznavam, "+playerName+"!", 100);
-		} else {
-			FunctionDef.truenarrator("Ty...", 500); FunctionDef.TNC(" ty nemas meno?", 125); FunctionDef.skip(500); FunctionDef.TNC(" Isto mas nejake meno. Dam ti sancu ho este zadat..", 80); cout << "\n"; 
+				if(mode=="speedrun"){
+					mode = ""; UlozitInfo(mode, "Mode.txt");
+					cout << "\n\n\n"; FunctionDef.truenarrator("\tUmmmm, vyzera to tak ze si mierne opustil svoj turbo prechod. Vies co to znamena...", 50); Sleep(2000);
+					system("cls");
+				}
+			level = 0; hp = 20; xp = 0; currenthp = 20; maxdmg = 1;
+			cout << "                                            V I T A J    V" << endl;
+		 	cout << " .----------------.    .----------------.  .----------------.  .-----------------.   .----------------. " << endl << "| .--------------. |  | .--------------. || .--------------. || .--------------. |  | .--------------. |" << endl << "| |              | |  | |     ______   | || |     ____     | || | ____  _____  | |  | |              | |" << endl << "| |              | |  | |   .' ___  |  | || |   .'    `.   | || ||_   \\|_   _| | |  | |              | |" << endl << "| |    ______    | |  | |  / .'   \\_|  | || |  /  .--.  \\  | || |  |   \\ | |   | |  | |    ______    | |" << endl << "| |   |______|   | |  | |  | |         | || |  | |    | |  | || |  | |\\ \\| |   | |  | |   |______|   | |" << endl << "| |              | |  | |  \\ `.___.'\\  | || |  \\  `--'  /  | || | _| |_\\   |_  | |  | |              | |" << endl << "| |              | |  | |   `._____.'  | || |   `.____.'   | || ||_____|\\____| | |  | |              | |" << endl << "| |              | |  | |              | || |              | || |              | |  | |              | |" << endl << "| '--------------' |  | '--------------' || '--------------' || '--------------' |  | '--------------' |" << endl << " '----------------'    '----------------'  '----------------'  '----------------'    '----------------' ";
+			cout << endl << "                                           The C++ Console RPG";
+			cout << endl << "                                         Stlac [cokolvek] a zacni hru"; 
+			_getch();
+			cout << "\n";FunctionDef.truenarrator("Zdravim ta cestovatel!", 100); FunctionDef.skip(1000); cout << "\n";
+			FunctionDef.truenarrator("...", 500); FunctionDef.skip(1000); cout << "\n";
+			FunctionDef.truenarrator("Asi sa nevolas cestovatel, ze", 80); FunctionDef.skip(1500); cout << "\n";
+			FunctionDef.truenarrator("Ako sa volas?", 80); FunctionDef.skip(1000); cout << endl << "      [NAPIS SVOJE MENO]" << endl;
 			FunctionDef.flushInput();
 			cout << ">>    "; getline(cin, input); FunctionDef.skip(1000); playerName = input; save();
 			if (!playerName.empty()) {
-			FunctionDef.truenarrator("Vyborne, rad ta spoznavam, "+playerName+"!", 80);
-		} else {
-			FunctionDef.truenarrator("Vazne nemas meno?", 125); cout << "\n"; FunctionDef.skip(1000);
-			FunctionDef.truenarrator("To je", 225); FunctionDef.TNC("...", 500); FunctionDef.skip(500); FunctionDef.TNC(" smutne. Je mi ta luto.", 200); cout << "\n"; FunctionDef.skip(750);
-			FunctionDef.truenarrator("Ale aj tak ta nejako potrebujem volat.", 80); cout << "\n"; FunctionDef.skip(500);
-			FunctionDef.truenarrator("Mozem ta volat Cestovatel?", 75); FunctionDef.skip(500); FunctionDef.TNC(" Myslim, ze to budem fajn.", 75); playerName = "Cestovatel"; save();
-		}
-	} 
-				FunctionDef.skip(1000); cout << "\n";
-			FunctionDef.truenarrator("Na akej obtiaznosti si prajes hrat hru, drahy cestovatel?", 80); FunctionDef.skip(200); cout << "\n"; FunctionDef.truenarrator("<1> LAHKA", 50); FunctionDef.skip(200); cout << "\n"; FunctionDef.truenarrator("<2> NORMALNA", 50); FunctionDef.skip(200); cout << "\n"; FunctionDef.truenarrator("<3> TAZKA", 50); FunctionDef.skip(200); cout << "\n"; FunctionDef.truenarrator("<4> TURBO", 50);
-			mode = FunctionDef.GVIclean(1,4);
-			if(mode=="1") mode = "easy";
-			else if(mode=="2") mode = "normal";
-			else if(mode=="3") mode = "hard";
-			else if(mode=="4") mode = "speedrun";
-			UlozitInfo(mode, "Mode.txt");
-			system("cls");
-			if(mode=="easy"){
-				cout << "\n\n\n\n\n\n"; FunctionDef.truenarrator("\t\tJednoducha obtiaznost...", 100); FunctionDef.skip(250);
-				cout << "\n\n"; FunctionDef.truenarrator("\t\tMas neobmedzeny pocet oziveni.", 50); 
-				Sleep(2000); lives = -1;
+				FunctionDef.truenarrator("Rad ta spoznavam, "+playerName+"!", 100);
+			} else {
+				FunctionDef.truenarrator("Ty...", 500); FunctionDef.TNC(" ty nemas meno?", 125); FunctionDef.skip(500); FunctionDef.TNC(" Isto mas nejake meno. Dam ti sancu ho este zadat..", 80); cout << "\n"; 
+				FunctionDef.flushInput();
+				cout << ">>    "; getline(cin, input); FunctionDef.skip(1000); playerName = input; save();
+				if (!playerName.empty()) {
+				FunctionDef.truenarrator("Vyborne, rad ta spoznavam, "+playerName+"!", 80);
+			} else {
+				FunctionDef.truenarrator("Vazne nemas meno?", 125); cout << "\n"; FunctionDef.skip(1000);
+				FunctionDef.truenarrator("To je", 225); FunctionDef.TNC("...", 500); FunctionDef.skip(500); FunctionDef.TNC(" smutne. Je mi ta luto.", 200); cout << "\n"; FunctionDef.skip(750);
+				FunctionDef.truenarrator("Ale aj tak ta nejako potrebujem volat.", 80); cout << "\n"; FunctionDef.skip(500);
+				FunctionDef.truenarrator("Mozem ta volat Cestovatel?", 75); FunctionDef.skip(500); FunctionDef.TNC(" Myslim, ze to budem fajn.", 75); playerName = "Cestovatel"; save();
 			}
-			else if(mode=="normal"){
-				cout << "\n\n\n\n\n\n"; FunctionDef.truenarrator("\t\tNormalna obtiaznost...", 100); FunctionDef.skip(250);
-				cout << "\n\n"; FunctionDef.truenarrator("\t\tMas k dispozicii 3 ozivenia.", 50); 
-				Sleep(2000); lives = 3;
+		} 
+					FunctionDef.skip(1000); cout << "\n";
+				FunctionDef.truenarrator("Na akej obtiaznosti si prajes hrat hru, drahy cestovatel?", 80); FunctionDef.skip(200); cout << "\n"; FunctionDef.truenarrator("<1> LAHKA", 50); FunctionDef.skip(200); cout << "\n"; FunctionDef.truenarrator("<2> NORMALNA", 50); FunctionDef.skip(200); cout << "\n"; FunctionDef.truenarrator("<3> TAZKA", 50); FunctionDef.skip(200); cout << "\n"; FunctionDef.truenarrator("<4> TURBO", 50);
+				mode = FunctionDef.GVIclean(1,4);
+				if(mode=="1") mode = "easy";
+				else if(mode=="2") mode = "normal";
+				else if(mode=="3") mode = "hard";
+				else if(mode=="4") mode = "speedrun";
+				UlozitInfo(mode, "Mode.txt");
+				system("cls");
+				if(mode=="easy"){
+					cout << "\n\n\n\n\n\n"; FunctionDef.truenarrator("\t\tJednoducha obtiaznost...", 100); FunctionDef.skip(250);
+					cout << "\n\n"; FunctionDef.truenarrator("\t\tMas neobmedzeny pocet oziveni.", 50); 
+					Sleep(2000); lives = -1;
+				}
+				else if(mode=="normal"){
+					cout << "\n\n\n\n\n\n"; FunctionDef.truenarrator("\t\tNormalna obtiaznost...", 100); FunctionDef.skip(250);
+					cout << "\n\n"; FunctionDef.truenarrator("\t\tMas k dispozicii 3 ozivenia.", 50); 
+					Sleep(2000); lives = 3;
+				}
+				else if(mode=="hard"){
+					cout << "\n\n\n\n\n\n"; FunctionDef.truenarrator("\t\tTazka obtiaznost...", 100); FunctionDef.skip(250);
+					cout << "\n\n"; FunctionDef.truenarrator("\t\tMas k dispozicii jedno ozivenie.", 50); 
+					Sleep(2000); lives = 1;
+				}
+				else{
+					cout << "\n\n\n\n\n\n"; FunctionDef.truenarrator("\t\tSpeedrun alias turbo obtiaznost...", 100); FunctionDef.skip(250);
+					cout << "\n\n"; FunctionDef.truenarrator("\t\tMas jedno ozivenie a hra sa neuklada. Tvoja cesta bude mat tu spravnu rychlost.", 50); 
+					Sleep(2000); lives = 1;
+				}
+				UlozitInfo(to_string(lives), "Lives.txt");
+				sequence=0;
+				sequence1(language);
 			}
-			else if(mode=="hard"){
-				cout << "\n\n\n\n\n\n"; FunctionDef.truenarrator("\t\tTazka obtiaznost...", 100); FunctionDef.skip(250);
-				cout << "\n\n"; FunctionDef.truenarrator("\t\tMas k dispozicii jedno ozivenie.", 50); 
-				Sleep(2000); lives = 1;
-			}
-			else{
-				cout << "\n\n\n\n\n\n"; FunctionDef.truenarrator("\t\tSpeedrun alias turbo obtiaznost...", 100); FunctionDef.skip(250);
-				cout << "\n\n"; FunctionDef.truenarrator("\t\tMas jedno ozivenie a hra sa neuklada. Tvoja cesta bude mat tu spravnu rychlost.", 50); 
-				Sleep(2000); lives = 1;
-			}
-			UlozitInfo(to_string(lives), "Lives.txt");
-			sequence=0;
-			sequence1(language);
-		}
 	}
 	void sequence1(string language){
 		if(language=="en"){
